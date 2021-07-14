@@ -1,0 +1,50 @@
+*,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  width: 100%;
+  min-height: 100%;
+}
+.header{
+  background-color: #272977;
+  padding: 0.5em 1em 0 1em;
+}
+.container{
+  position: relative;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+.header__decor{
+  position: absolute;
+  top: -500px;
+  left: -380px;
+}
+.header__name{
+  max-width: 300px;
+}
+.header__name-company{
+  max-width: 300px;
+  height: 25px;
+}
+.header__link-wrap{
+  display: inline-block;
+}
+.container-header{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.header__link-wrap_name-company{
+  align-self: flex-end;
+}
