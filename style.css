@@ -85,9 +85,6 @@ body {
   flex-direction: column-reverse;
   align-items: center;
 }
-.header__link-wrap_name-company{
-  align-self: flex-end;
-}
 .preview{
   padding: 9em 0 3em 0;
 }
