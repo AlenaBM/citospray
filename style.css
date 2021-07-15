@@ -1,3 +1,39 @@
+@font-face {
+    font-family: 'Leto Sans';
+    src: url('font/LetoSans-Bold.eot');
+    src: url('font/LetoSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('font/LetoSans-Bold.woff2') format('woff2'),
+        url('font/LetoSans-Bold.woff') format('woff'),
+        url('font/LetoSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Leto Sans';
+    src: url('font/LetoSans-Bold_1.eot');
+    src: url('font/LetoSans-Bold_1.eot?#iefix') format('embedded-opentype'),
+        url('font/LetoSans-Bold_1.woff2') format('woff2'),
+        url('font/LetoSans-Bold_1.woff') format('woff'),
+        url('font/LetoSans-Bold_1.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Leto Sans';
+    src: url('font/LetoSans-Bold_2.eot');
+    src: url('font/LetoSans-Bold_2.eot?#iefix') format('embedded-opentype'),
+        url('font/LetoSans-Bold_2.woff2') format('woff2'),
+        url('font/LetoSans-Bold_2.woff') format('woff'),
+        url('font/LetoSans-Bold_2.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 *,
 ul,
 li,
@@ -15,20 +51,24 @@ html {
 body {
   width: 100%;
   min-height: 100%;
+  font-family: 'Leto Sans';
+  position: relative;
 }
 .header{
   background-color: #272977;
-  padding: 0.5em 1em 0 1em;
+  padding-top: 0.5em;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 .container{
   position: relative;
-  max-width: 1110px;
+  max-width: 1080px;
   margin: 0 auto;
-}
-.header__decor{
-  position: absolute;
-  top: -500px;
-  left: -380px;
+  padding: 0 15px;
 }
 .header__name{
   max-width: 300px;
@@ -47,4 +87,108 @@ body {
 }
 .header__link-wrap_name-company{
   align-self: flex-end;
+}
+.preview{
+  padding: 9em 0 3em 0;
+}
+.preview__decor{
+  position: absolute;
+  top: -10px;
+  left: -130px;
+  width: 240px;
+  z-index: -1;
+}
+.preview__img-wrap{
+  position: relative;
+  max-width: 200px;
+  margin: 0 auto;
+  height: 250px;
+  margin-bottom: 1.5em;
+}
+.preview__img_bottles{
+  max-width: 270px;
+  position: absolute;
+  top: 0;
+  left: -70px;
+}
+.preview__img_spray{
+  max-width: 65px;
+  position: absolute;
+  top: 0;
+  right: -45px;
+}
+.preview__pluses-wrap{
+  color: #272977;
+}
+.preview__pluses-item{
+  position: relative;
+  padding-left: 25px;
+  font-size: 17px;
+}
+.preview__pluses-item::before{
+  content: '';
+  position: absolute;
+  background-image: url(img/dots.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  width: 15px;
+  height: 15px;
+  left: 0;
+  top: 4px;
+}
+.preview__pluses-item:not(:last-child){
+  margin-bottom: 1em;
+}
+.preview__pluses-list{
+  max-width: 500px;
+}
+@media (min-width: 600px){
+  .container-header{
+    flex-direction: column-reverse;
+  }
+  .preview__pluses-list{
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1060px){
+  .container-preview{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .container-header{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .preview__img-wrap{
+    width: 300px;
+  }
+  .header__link-wrap_name-company{
+    align-self: center;
+  }
+  .header__name-company {
+    max-width: 220px;
+    height: 56px;
+  }
+  .preview__decor{
+    top: -10px;
+    left: -160px;
+    width: 300px;
+  } 
+  .preview__img_bottles{
+    max-width: 400px;
+  }
+  .preview__img_spray{
+    max-width: 110px;
+    right: -165px;
+    top: -50px;
+  }
+  .preview__img-wrap{
+    height: 380px;
+    margin-left: 0;
+    margin-right: auto;
+  }
 }
