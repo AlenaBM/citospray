@@ -123,7 +123,7 @@ body {
 .preview__pluses-item{
   position: relative;
   padding-left: 25px;
-  font-size: 17px;
+  font-size: 15px;
 }
 .preview__pluses-item::before{
   content: '';
@@ -150,15 +150,12 @@ body {
   .preview__pluses-list{
     margin: 0 auto;
   }
+  .preview__pluses-item {
+    position: relative;
+    padding-left: 25px;
+    font-size: 17px;
 }
-
-@media (min-width: 1060px){
-  .container-preview{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  .container-header{
+.container-header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -170,20 +167,33 @@ body {
     align-self: center;
   }
   .header__name-company {
-    max-width: 220px;
-    height: 56px;
+    max-width: 180px;
+    height: 48px;
   }
   .preview__decor{
     top: -10px;
     left: -160px;
     width: 300px;
   } 
+}
+
+@media (min-width: 1060px){
+  .container-preview{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .header__name-company {
+    max-width: 220px;
+    height: 56px;
+  }
   .preview__img_bottles{
     max-width: 400px;
+    left: -20px;
   }
   .preview__img_spray{
     max-width: 110px;
-    right: -165px;
+    right: -260px;
     top: -50px;
   }
   .preview__img-wrap{
